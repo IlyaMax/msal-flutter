@@ -191,6 +191,7 @@ class MsalFlutterPlugin : MethodCallHandler {
             Log.d("MsalFlutter", "Client already initialized.")
             if (msalApp.configuration.clientId == clientId) {
                 result.success(true)
+                return
             } else {
                 result.error("CHANGED_CLIENTID", "Attempting to initialize with multiple clientIds.", null)
             }
